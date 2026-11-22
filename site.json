@@ -1,0 +1,11 @@
+{
+  "hero_photo": "",
+  "portrait": "",
+  "videos": [
+    {"title": "Chaîne vidéo", "url": "https://www.youtube.com/watch?v=qEj-lkTbxDg", "description": "Si le lecteur n'est pas autorisé par YouTube, utilisez le lien de secours."},
+    {"title": "Autres vidéos", "url": "https://www.youtube.com/watch?v=sxhnwgEuMu8", "description": ""}
+  ],
+  "textes": [],
+  "photos": [],
+  "affiches": []
+}

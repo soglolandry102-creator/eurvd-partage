@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: soglolandry102-creator/eurvd-partage
+  branch: main
+
+locale: fr
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: contenu
+    label: Contenu du site
+    files:
+      - name: site
+        label: Textes, vidéos, photos et affiches
+        file: site.json
+        fields:
+          - {label: "Photo d'accueil (page d'accueil)", name: hero_photo, widget: image, required: false}
+          - {label: "Portrait (section Prophète)", name: portrait, widget: image, required: false}
+          - label: Vidéos
+            name: videos
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Titre, name: title, widget: string}
+              - {label: "Lien YouTube", name: url, widget: string}
+              - {label: Description, name: description, widget: text, required: false}
+          - label: Textes
+            name: textes
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Titre, name: title, widget: string}
+              - {label: Date, name: date, widget: string, required: false}
+              - {label: Texte, name: body, widget: text}
+          - label: Photos
+            name: photos
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - {label: Photo, name: image, widget: image}
+              - {label: Légende, name: caption, widget: string, required: false}
+          - label: Affiches
+            name: affiches
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - {label: Affiche, name: image, widget: image}
+              - {label: Titre, name: title, widget: string, required: false}
+              - {label: "Date de l'événement", name: date, widget: string, required: false}
